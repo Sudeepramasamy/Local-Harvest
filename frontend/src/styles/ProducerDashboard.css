@@ -1,0 +1,96 @@
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f1fdf1;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .dashboard-title {
+    text-align: center;
+    color: #2e7d32;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  /* Add Product Button */
+  .add-product-button {
+    display: block;
+    width: 100%;
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-product-button:hover {
+    background: #1b5e20;
+  }
+  
+  /* Products Section */
+  .products-title {
+    text-align: center;
+    color: #388e3c;
+  }
+  
+  /* No Products Message */
+  .no-products-message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Product List */
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Product Card */
+  .product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-name {
+    color: #2e7d32;
+  }
+  
+  .product-description {
+    color: #555;
+  }
+  
+  .product-info {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Product Actions */
+  .product-actions {
+    margin-top: 10px;
+  }
+  
+  .view-details, .add-stage {
+    color: #1b5e20;
+    font-weight: bold;
+  }
+  
+  .view-details:hover, .add-stage:hover {
+    text-decoration: underline;
+  }
+  
