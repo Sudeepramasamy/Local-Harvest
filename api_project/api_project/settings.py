@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-%1$(0ihq7*4u&nbqf#nasatal1+8-2=nfwv*b(qp8r4(_cmg24
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1,localhost,local-harvest-2.onrender.com']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'local-harvest-2.onrender.com']
 
 # Application definition
 
