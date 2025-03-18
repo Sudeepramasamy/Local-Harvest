@@ -6,3 +6,4 @@ gunicorn
 whitenoise
 djangorestframework-simplejwt==5.2.2
 psycopg2-binary==2.9.9 
+dj-database-url
