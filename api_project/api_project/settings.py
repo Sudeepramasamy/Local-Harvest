@@ -78,6 +78,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://loclharvest.netlify.app",
 ]
 
 # OR Allow all origins (for development only)
