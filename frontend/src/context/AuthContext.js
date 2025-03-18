@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     } else {
       setLoading(false);
     }
-  }, []);
+  }, [fetchUserProfile]);
 
   const fetchUserProfile = async () => {
     try {
