@@ -14,8 +14,6 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,7 +27,8 @@ SECRET_KEY = 'django-insecure-%1$(0ihq7*4u&nbqf#nasatal1+8-2=nfwv*b(qp8r4(_cmg24
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'local-harvest-2.onrender.com']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -80,7 +79,6 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://loclharvest.netlify.app",
 ]
 
 # OR Allow all origins (for development only)
@@ -111,8 +109,19 @@ WSGI_APPLICATION = 'api_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.postgresql',
+   #     'NAME': 'local_harvest',  # Database name
+    #    'USER': 'myuser',         # Database user
+     #   'PASSWORD': 'mypassword', # Database password
+      #  'HOST': 'localhost',      # Change to '127.0.0.1' if needed
+       # 'PORT': '5432',           # Default PostgreSQL port
+    #}
+#}
+
 DATABASES = {
-    'default': dj_database_url.config(default="postgresql://test_db_vqwt_user:5L2qnXbJyOuK9ibudWx5kvyZupWFjMTq@dpg-cvcp1vrqf0us73dj5umg-a:5432/test_db_vqwt")
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 JWT_AUTH = {
