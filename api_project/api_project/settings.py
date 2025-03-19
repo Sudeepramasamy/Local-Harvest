@@ -83,8 +83,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://local-harvest-2.onrender.com"
 ]
 
-# OR Allow all origins (for development only)
-CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'api_project.urls'
