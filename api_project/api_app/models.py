@@ -5,19 +5,19 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    role = models.CharField(max_length=10, choices=[('FARMER', 'Farmer'), ('CONSUMER', 'Consumer')])
+    role = models.CharField(max_length=10, choices=[('FARMER', 'Farmer'), ('CONSUMER', 'Consumer')], default='CONSUMER')
     
     def __str__(self):
         return f"{self.user.username} - {self.role}"
 
 @receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
+def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
-        UserProfile.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+        UserProfile.objects.create(user=instance, role='CONSUMER')
+    else:
+        # Only save the profile if it exists
+        if hasattr(instance, 'profile'):
+            instance.profile.save()
 
 def create_missing_profiles():
     for user in User.objects.filter(profile__isnull=True):
