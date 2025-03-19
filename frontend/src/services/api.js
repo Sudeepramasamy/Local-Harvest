@@ -41,7 +41,7 @@ api.interceptors.response.use(
         }
 
         const response = await axios.post(
-          "http://localhost:8000/api/token/refresh/",
+          "local-harvest-2.onrender.com/api/token/refresh/",
           { refresh: refreshToken },
           { headers: { "Content-Type": "application/json" } }
         );
