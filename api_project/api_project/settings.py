@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
-import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +26,7 @@ SECRET_KEY = 'django-insecure-%1$(0ihq7*4u&nbqf#nasatal1+8-2=nfwv*b(qp8r4(_cmg24
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -79,10 +78,13 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+
     "https://loclharvest.netlify.app",
+    "https://local-harvest-2.onrender.com"
 ]
 
-
+# OR Allow all origins (for development only)
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'api_project.urls'
@@ -110,10 +112,10 @@ WSGI_APPLICATION = 'api_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.postgresql',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'local_harvest',  # Database name
-    'USER': 'myuser',         # Database user
+        'USER': 'myuser',         # Database user
         'PASSWORD': 'mypassword', # Database password
         'HOST': 'localhost',      # Change to '127.0.0.1' if needed
         'PORT': '5432',           # Default PostgreSQL port
@@ -121,7 +123,7 @@ DATABASES = {
 }
 
 #DATABASES = {
-    #"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+ #   "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 #}
 
 JWT_AUTH = {
