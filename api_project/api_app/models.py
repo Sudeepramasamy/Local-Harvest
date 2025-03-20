@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile',unique=True)
     role = models.CharField(max_length=10, choices=[('FARMER', 'Farmer'), ('CONSUMER', 'Consumer')], default='CONSUMER')
     
     def __str__(self):
