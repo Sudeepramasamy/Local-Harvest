@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -111,20 +112,20 @@ WSGI_APPLICATION = 'api_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'local_harvest',  # Database name
-        'USER': 'myuser',         # Database user
-        'PASSWORD': 'mypassword', # Database password
-        'HOST': 'localhost',      # Change to '127.0.0.1' if needed
-        'PORT': '5432',           # Default PostgreSQL port
-    }
-}
-
 #DATABASES = {
- #   "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    #'default': {
+     #   'ENGINE': 'django.db.backends.postgresql',
+      #  'NAME': 'local_harvest',  # Database name
+       # 'USER': 'myuser',         # Database user
+        #'PASSWORD': 'mypassword', # Database password
+        #'HOST': 'localhost',      # Change to '127.0.0.1' if needed
+        #'PORT': '5432',           # Default PostgreSQL port
+    #}
 #}
+
+DATABASES = {
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 JWT_AUTH = {
     # Authorization:Token xxx
