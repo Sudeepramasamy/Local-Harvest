@@ -31,7 +31,7 @@ body {
   padding: 20px;
 }
 
-/* Navbar Styles */
+/* Updated Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -39,6 +39,7 @@ body {
   background-color: var(--primary);
   padding: 10px 20px;
   color: white;
+  position: relative;
 }
 
 .navbar-logo a {
@@ -79,6 +80,59 @@ body {
 
 .logout-btn:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-toggler {
+    display: block;
+  }
+  
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .navbar-links.open {
+    max-height: 500px;
+    margin-top: 10px;
+  }
+  
+  .navbar-links a, 
+  .navbar-links span, 
+  .navbar-links button {
+    margin: 5px 0;
+  }
+  
+  .user-info {
+    margin-left: 0;
+  }
 }
 
 /* Button Styles */
