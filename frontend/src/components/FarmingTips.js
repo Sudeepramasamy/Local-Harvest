@@ -62,9 +62,14 @@ const FarmingTips = () => {
   return (
     <div className="farming-tips">
       <h2>Farming Tips & Methods</h2>
+
+        <p className="vintage-text">
+          🌿 These tips will help farmers optimize their productivity, reduce costs, and promote sustainable agriculture. 🚜🌱
+        </p>
       
       {tips.length === 0 ? (
         <div>No farming tips available yet.</div>
+        
       ) : (
         <div className="tips-list">
           {tips.map(tip => (

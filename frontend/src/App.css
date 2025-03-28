@@ -386,3 +386,10 @@ th {
     grid-template-columns: 1fr;
   }
 }
+.vintage-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #6b4226;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
