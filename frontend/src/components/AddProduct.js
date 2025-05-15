@@ -131,8 +131,8 @@ const AddProduct = () => {
     <option value="ml">Milliliters (ml)</option>
     <option value="pcs">Pieces (pcs)</option>
     <option value="dozen">Dozen</option>
-    <option value="dozen">Bunch</option>
-    <option value="dozen">Bottle</option>
+    <option value="bunch">Bunch</option>
+    <option value="bottle">Bottle</option>
   </select>
 </div>
 
