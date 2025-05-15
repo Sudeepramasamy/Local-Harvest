@@ -8,6 +8,7 @@ const AddProduct = () => {
     description: '',
     price: '',
     stock: '',
+    unit:'',
     farming_method: '',
     image:null,
   });
@@ -36,7 +37,7 @@ const AddProduct = () => {
     setError('');
     
     // Validate form
-    if (!formData.name || !formData.description || !formData.price || !formData.stock || !formData.image) {
+    if (!formData.name || !formData.description || !formData.price || !formData.stock || !formData.unit || !formData.image) {
       setError('Please fill in all fields');
       return;
     }
@@ -53,6 +54,7 @@ const AddProduct = () => {
       formDataToSend.append('description', formData.description);
       formDataToSend.append('price', formData.price);
       formDataToSend.append('stock', formData.stock);
+      formDataToSend.append('unit', formData.unit);
       formDataToSend.append('farming_method', formData.farming_method);
       formDataToSend.append('image', formData.image); // Append image file
 
@@ -118,6 +120,20 @@ const AddProduct = () => {
              onChange={handleChange}
            />
          </div>
+
+         <div className="form-group">
+  <label>Unit</label>
+  <select name="unit" value={formData.unit} onChange={handleChange}>
+    <option value="">-- Select Unit --</option>
+    <option value="kg">Kilograms (kg)</option>
+    <option value="g">Grams (g)</option>
+    <option value="l">Liters (l)</option>
+    <option value="ml">Milliliters (ml)</option>
+    <option value="pcs">Pieces (pcs)</option>
+    <option value="dozen">Dozen</option>
+  </select>
+</div>
+
          
          <div className="form-group">
            <label>Farming Method  (optional) </label>
