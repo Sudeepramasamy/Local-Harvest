@@ -308,6 +308,14 @@ body {
 }
 
 /* Farming Tips Styles */
+.farming-tips h2{
+  font-size: 2.5rem;
+  color: #2e7d32; /* organic green */
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .tips-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -404,11 +412,13 @@ th {
   }
 }
 .vintage-text {
-  font-size: 16px;
-  font-style: normal;
-  color: #6b4226;
-  font-weight: 400;
-  font-family: "Courgette", cursive;
+  font-size: 1.1rem;
+  color: #4e4e4e;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .product-list h1 {
