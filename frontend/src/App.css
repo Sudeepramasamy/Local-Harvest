@@ -234,6 +234,7 @@ body {
   color: var(--text-light);
   margin-bottom: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:bold;
 }
 
 .product-detail {
