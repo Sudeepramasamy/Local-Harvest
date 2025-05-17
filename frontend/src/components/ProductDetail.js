@@ -71,40 +71,56 @@ const ProductDetail = () => {
     return <div className="error-message">{error}</div>;
   }
 
-  return (
+   return (
     <div className="product-detail">
-      <h2>{product.name}</h2>
-      <div className="product-info">
-        <p><strong>Price:</strong> ${product.price}</p>
-        <p><strong>Stock Available:</strong> {product.stock}</p>
-        <p><strong>Seller:</strong> {product.farmer_name}</p>
-        <p><strong>Description:</strong> {product.description}</p>
-        <p><strong>Farming Method:</strong> {product.farming_method}</p>
-      </div>
-      
-      {isAuthenticated && user.role === 'CONSUMER' && product.stock > 0 && (
-        <div className="purchase-section">
-          <div className="quantity-control">
-            <label htmlFor="quantity">Quantity:</label>
-            <input
-              type="number"
-              id="quantity"
-              min="1"
-              max={product.stock}
-              value={quantity}
-              onChange={handleQuantityChange}
+      <button className="btn back-btn" onClick={() => navigate('/products')}>
+        Back to Products
+      </button>
+
+      <div className="product-detail-container">
+        <div className="product-image">
+          {product.image && (
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{ width: '100%', borderRadius: '8px' }}
             />
-          </div>
-          <p className="total-price">Total: ${(quantity * product.price).toFixed(2)}</p>
-          <button className="btn" onClick={handlePurchase}>Buy Now</button>
+          )}
         </div>
-      )}
-      
-      {product.stock === 0 && (
-        <div className="out-of-stock">Product is out of stock</div>
-      )}
-      
-      <button className="btn back-btn" onClick={() => navigate('/products')}>Back to Products</button>
+
+        <div className="product-text">
+          <h2>{product.name}</h2>
+          <div className="product-info">
+            <p><strong>Price:</strong> ${product.price}</p>
+            <p><strong>Stock Available:</strong> {product.stock}</p>
+            <p><strong>Seller:</strong> {product.farmer_name}</p>
+            <p><strong>Description:</strong> {product.description}</p>
+            <p><strong>Farming Method:</strong> {product.farming_method}</p>
+          </div>
+
+          {isAuthenticated && user.role === 'CONSUMER' && product.stock > 0 && (
+            <div className="purchase-section">
+              <div className="quantity-control">
+                <label htmlFor="quantity">Quantity:</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  min="1"
+                  max={product.stock}
+                  value={quantity}
+                  onChange={handleQuantityChange}
+                />
+              </div>
+              <p className="total-price">Total: ${(quantity * product.price).toFixed(2)}</p>
+              <button className="btn" onClick={handlePurchase}>Buy Now</button>
+            </div>
+          )}
+
+          {product.stock === 0 && (
+            <div className="out-of-stock">Product is out of stock</div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

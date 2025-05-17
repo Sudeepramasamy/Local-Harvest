@@ -439,3 +439,50 @@ th {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.product-detail {
+  padding: 20px;
+}
+
+.product-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Image container styling */
+.product-image {
+  flex: 1 1 40%;
+  max-width: 400px;
+}
+
+/* Text container styling */
+.product-text {
+  flex: 1 1 55%;
+}
+
+/* Optional: Ensure the image covers the allocated area */
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Optional: Spacing for product information */
+.product-info p {
+  margin: 10px 0;
+}
+
+/* Quantity input styling */
+.quantity-control {
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
