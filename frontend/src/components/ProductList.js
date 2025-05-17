@@ -72,6 +72,12 @@ const ProductList = () => {
 
   return (
     <div className="product-list">
+      <h1>Eat Fresh, Live Healthy!</h1>
+      <p>
+      Our products are grown naturally by local farmers, without harmful chemicals or pesticides.
+      Every bite supports sustainable farming and boosts your well-being.
+      Choose organic, support local, and taste the difference!
+      </p>
       <h2>Available Products</h2>
       {products.length === 0 ? (
         <div>No products available.</div>
