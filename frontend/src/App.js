@@ -11,6 +11,7 @@ import MyProducts from './components/MyProducts';
 import FarmingTips from './components/FarmingTips';
 import AddTip from './components/AddTip';
 import Orders from './components/Orders';
+import ChooseUs from './components/ChooseUs';
 import './App.css';
 
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -38,6 +39,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/products" element={<ProductList />} />
+              <Route path="/choose" element={<ChooseUs />} />
               <Route path="/products/:id" element={<ProductDetail />} />
               <Route 
                 path="/add-product" 
