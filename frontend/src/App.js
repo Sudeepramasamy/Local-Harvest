@@ -49,14 +49,6 @@ function App() {
                   </PrivateRoute>
                 } 
               />
-              <Route 
-                path="/my-products" 
-                element={
-                  <PrivateRoute allowedRoles={['FARMER']}>
-                    <MyProducts />
-                  </PrivateRoute>
-                } 
-              />
               <Route path="/tips" element={<FarmingTips />} />
               <Route 
                 path="/add-tip" 

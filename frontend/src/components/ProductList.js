@@ -95,7 +95,7 @@ const ProductList = () => {
               )}
               <h3>{product.name}</h3>
               <p className="product-price">${product.price}</p>
-              <p className="product-stock">Stock: {product.stock}</p>
+              <p className="product-stock">Stock: {product.stock} {product.unit}</p>
               <p className="product-farmer">By: {product.farmer_name}</p>
               <Link to={`/products/${product.id}`} className="btn">View Details</Link>
               {user && user.username === product.farmer_name && (

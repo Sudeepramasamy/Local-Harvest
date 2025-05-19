@@ -65,7 +65,7 @@ const AddProduct = () => {
         },
       });
 
-      navigate('/my-products');
+      navigate('/products');
     } catch (error) {
       console.error('Error adding product:', error);
       setError('Failed to add product');
