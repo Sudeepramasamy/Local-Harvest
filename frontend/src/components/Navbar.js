@@ -37,7 +37,6 @@ const Navbar = () => {
             {user.role === 'FARMER' && (
               <>
                 <Link to="/add-product" onClick={() => setIsOpen(false)}>Add Product</Link>
-                <Link to="/my-products" onClick={() => setIsOpen(false)}>My Products</Link>
                 <Link to="/add-tip" onClick={() => setIsOpen(false)}>Add Tip</Link>
               </>
             )}

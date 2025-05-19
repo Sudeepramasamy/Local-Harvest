@@ -92,7 +92,7 @@ const ProductDetail = () => {
           <h2>{product.name}</h2>
           <div className="product-info">
             <p><strong>Price:</strong> ${product.price}</p>
-            <p><strong>Stock Available:</strong> {product.stock}</p>
+            <p><strong>Stock Available:</strong> {product.stock} {product.unit}</p>
             <p><strong>Seller:</strong> {product.farmer_name}</p>
             <p><strong>Description:</strong> {product.description}</p>
             <p><strong>Farming Method:</strong> {product.farming_method}</p>
