@@ -40,7 +40,7 @@ class ProductSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Product
-        fields = ('id', 'name', 'description', 'price', 'stock', 'farming_method', 'farmer_name', 'created_at','image')
+        fields = ('id', 'name', 'description', 'price', 'stock','unit', 'farming_method', 'farmer_name', 'created_at','image')
         read_only_fields = ('farmer_name', 'created_at')
 
 class OrderSerializer(serializers.ModelSerializer):
