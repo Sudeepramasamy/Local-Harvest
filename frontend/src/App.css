@@ -536,38 +536,3 @@ th {
 
 
 
-
-.footer {
-  background-color: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: auto;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 10px;
-}
-
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-nav a:hover {
-  text-decoration: underline;
-}
-
-
-
-@media (max-width: 600px) {
-  .footer-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-}

@@ -11,10 +11,6 @@ import FarmingTips from './components/FarmingTips';
 import AddTip from './components/AddTip';
 import Orders from './components/Orders';
 import ChooseUs from './components/ChooseUs';
-import Footer from './components/Footer';
-import About from './components/About';
-import Contact from './components/Contact';
-import Feedback from './components/Feedback';
 import './App.css';
 
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -69,13 +65,9 @@ function App() {
                   </PrivateRoute>
                 } 
               />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/feedback" element={<Feedback />} />
               <Route path="/" element={<Navigate to="/products" />} />
             </Routes>
           </main>
-          <Footer></Footer>
         </div>
       </Router>
     </AuthProvider>
